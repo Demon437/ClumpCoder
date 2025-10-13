@@ -1,29 +1,27 @@
 import React from 'react'
-import { quotes } from '../assets'
+import SpotlightCard from './SpotlightCard'
 
-const Feedback = ({ content, name, title, img }) => {
+const Feedback = ({ icon, content, name, title, img }) => {
   return (
-    <div className='flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
-      <img
-        src={quotes}
-        alt='double-quotes'
-        className='w-[42px] h-[27px] object-contain'
-      />
-      <p className='font-poppins font-normal text-[18px] leading-[32px] text-white my-10'>
+    <SpotlightCard className='max-w-[400px] mx-auto my-5' spotlightColor='rgba(0, 229, 255, 0.3)'>
+      <div className='flex flex-col items-center bg-transparent rounded-[16px] px-2 py-2 w-full'>
+      {/* Icon */}
+      <div className="mb-4">
+        {icon && (
+          <img src={icon} alt="icon" className="w-12 h-12 mx-auto" />
+        )}
+      </div>
+      <div className='flex flex-col ml-4'>
+          <h4 className='font-poppins font-semibold text-[18px] leading-[28px] text-gradient bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>{name}</h4>
+          <p className='font-poppins font-normal text-[15px] leading-[22px] text-gray-300'>{title}</p>
+        </div>
+      <p className='font-poppins font-normal text-[17px] leading-[28px] text-white text-center mb-6'>
         {content}
       </p>
-      <div className='flex flex-row'>
-        <img
-          src={img}
-          alt={name}
-          className='w-[48px] h-[48px] rounded-full'
-        />
-        <div className='flex flex-col ml-4'>
-          <h4 className='font-poppins font-semibold text-[20px] leading-[32px] text-white'>{name}</h4>
-          <p className='font-poppins font-normal text-[16px] leading-[24px] text-white'>{title}</p>
-        </div>
       </div>
-    </div>
+    </SpotlightCard>
+
+   
   )
 }
 

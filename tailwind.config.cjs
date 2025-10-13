@@ -9,6 +9,50 @@ module.exports = {
         secondary: "#00f6ff",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
+        // Tokens for ui components
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primaryToken: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondaryToken: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      keyframes: {
+        meteor: {
+          '0%': { transform: 'rotate(var(--angle)) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': { transform: 'rotate(var(--angle)) translateX(-500px)', opacity: '0' },
+        },
+      },
+      animation: {
+        meteor: 'meteor 5s linear infinite',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

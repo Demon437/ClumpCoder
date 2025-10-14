@@ -10,6 +10,8 @@ import mobileImage from '../assets/mobile 2.0.jpg';
 import mobileImage4 from '../assets/mobile 4.0.jpg';
 import erpImage2 from '../assets/image erp 2.jpg';
 import styles from '../style';
+import newsImage from '../assets/news.png';
+import iciciImage from '../assets/icici.webp';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -62,6 +64,20 @@ const Portfolio = () => {
       image: erpImage2,
       description: "Custom ERP system for a manufacturing company, increasing efficiency by 40%.",
       link: "/erp-system"
+    },
+    {
+      id: 8,
+      title: "NewsTrack",
+      image: newsImage,
+      description: "Real-time headlines, breaking news, and interviews in a clean, responsive UI.",
+      link: "/newstrack"
+    },
+    {
+      id: 9,
+      title: "ICICI Bank – Smart Finance Platform",
+      image: iciciImage,
+      description: "SIP planning and loans in a secure, modern, responsive banking UI.",
+      link: "/icici-bank"
     }
   ];
 
@@ -110,7 +126,7 @@ const Portfolio = () => {
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className={`w-full ${index <= 2 ? 'h-64' : 'h-48'} object-cover transition-transform duration-300 hover:scale-110`}
+                  className={`w-full ${index <= 2 ? 'h-64' : 'h-48'} ${item.title === 'NewsTrack' ? 'object-contain p-2 bg-white' : 'object-cover'} transition-transform duration-300 hover:scale-110`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                   <Link 

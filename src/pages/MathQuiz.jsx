@@ -3,7 +3,7 @@ import React from 'react';
 export default function MathQuiz() {
   return (
     <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24 py-12 max-w-7xl mx-auto text-gray-300 bg-gradient-to-b from-[#0B1220] via-[#0B1220] to-[#102a4a]">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-blue-400 mb-10">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white-400 mb-10">
         Case Study: The Making of "Math Game" - A High‑Stakes Puzzle Sensation
       </h1>
 

@@ -9,6 +9,8 @@ import Trilingual from './pages/Trilingual'
 import MathQuiz from './pages/MathQuiz'
 import MufoApp from './pages/MufoApp'
 import ERPSystem from './pages/ERPSystem'
+import NewsTrack from './pages/NewsTrack'
+import ICICIBank from './pages/ICICIBank'
 import ScrollToTop from './components/ScrollToTop'
 import './index.css'
 
@@ -25,6 +27,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/math-quiz" element={<MathQuiz />} />
         <Route path="/mufo-app" element={<MufoApp />} />
         <Route path="/erp-system" element={<ERPSystem />} />
+        <Route path="/newstrack" element={<NewsTrack />} />
+        <Route path="/icici-bank" element={<ICICIBank />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

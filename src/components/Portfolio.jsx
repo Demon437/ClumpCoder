@@ -11,7 +11,7 @@ import mobileImage4 from '../assets/mobile 4.0.jpg';
 import erpImage2 from '../assets/image erp 2.jpg';
 import styles from '../style';
 import newsImage from '../assets/news.png';
-import iciciImage from '../assets/icici.webp';
+import bankImage from '../assets/bank.jpg';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -22,7 +22,7 @@ const Portfolio = () => {
       description: "At Kuhoo, we believe that providing the right loan at the right time can positively transform not just the life of a student but also uplift their entire family.",
       link: "/kuhoo"
     },
-    
+
     {
       id: 2,
       title: "Eduacademy",
@@ -75,12 +75,12 @@ const Portfolio = () => {
     {
       id: 9,
       title: "ICICI Bank – Smart Finance Platform",
-      image: iciciImage,
+      image: bankImage,
       description: "SIP planning and loans in a secure, modern, responsive banking UI.",
       link: "/icici-bank"
     }
   ];
-
+  
 
   return (
     <section id="portfolio" className={`${styles.paddingY} bg-primary relative overflow-hidden`}>
@@ -90,22 +90,22 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="relative">
-              <img 
-                src={logo} 
-                alt="ClumpCoder Logo" 
+              <img
+                src={logo}
+                alt="ClumpCoder Logo"
                 className="w-20 h-20 logo-animated portfolio-logo"
               />
               <div className="absolute inset-0 bg-blue-gradient rounded-full opacity-30 animate-ping"></div>
             </div>
           </div>
-          
+
           <h2 className={`${styles.heading2} mb-4 portfolio-title`}>
             <span className="text-gradient">Our Portfolio</span>
           </h2>
           <p className={`${styles.paragraph} max-w-2xl mx-auto portfolio-subtitle`}>
             Explore our successful projects and innovative solutions that have transformed businesses across various industries.
           </p>
-          
+
           {/* Animated divider */}
           <div className="flex justify-center mt-8">
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent portfolio-divider"></div>
@@ -117,19 +117,19 @@ const Portfolio = () => {
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
           {portfolioItems.map((item, index) => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               className="portfolio-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={item.image} 
+                <img
+                  src={item.image}
                   alt={item.title}
                   className={`w-full ${index <= 2 ? 'h-64' : 'h-48'} ${item.title === 'NewsTrack' ? 'object-contain p-2 bg-white' : 'object-cover'} transition-transform duration-300 hover:scale-110`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                  <Link 
+                  <Link
                     to={item.link}
                     className="inline-flex items-center px-4 py-2 bg-blue-gradient text-white rounded-lg hover:shadow-lg transition-all duration-300"
                   >
@@ -140,7 +140,7 @@ const Portfolio = () => {
                   </Link>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-gray-200 mb-4">{item.description}</p>

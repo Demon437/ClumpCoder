@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
-      <img src={logo} alt='hoobank' className='w-[50px] h-[50px] logo-animated'/>
+      <img src={logo} alt='ClumpCoder' className='w-[50px] h-[50px] logo-animated' />
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, i) => (
-          <li 
+          <li
             key={nav.id}
             className={`navbar-item font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white`}
             style={{ '--index': i }}
@@ -19,7 +19,7 @@ const Navbar = () => {
             <a href={`#${nav.id}`}>
               {nav.title}
             </a>
-          </li>        
+          </li>
         ))}
       </ul>
       <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className={`${toggle ? 'flex' : 'hidden'} mobile-menu p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
           <ul className='list-none flex flex-col justify-end items-center flex-1'>
             {navLinks.map((nav, i) => (
-              <li 
+              <li
                 key={nav.id}
                 className={`mobile-navbar-item font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mb-0' : 'mb-4'} text-white`}
                 style={{ '--index': i }}
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <a href={`#${nav.id}`}>
                   {nav.title}
                 </a>
-              </li>        
+              </li>
             ))}
           </ul>
         </div>
